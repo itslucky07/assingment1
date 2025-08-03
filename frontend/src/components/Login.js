@@ -33,7 +33,7 @@ const Login = () => {
     try {
       if (isLogin) {
         // Login
-        const response = await axios.post('http://localhost:5000/api/auth/login', {
+        const response = await axios.post('https://assingment1-v0jx.onrender.com/api/auth/login', {
           email: formData.email,
           password: formData.password
         });
@@ -47,7 +47,7 @@ const Login = () => {
         }, 1000);
       } else {
         // Register
-        const registerResponse = await axios.post('http://localhost:5000/api/auth/register', {
+        const registerResponse = await axios.post('https://assingment1-v0jx.onrender.com/api/auth/register', {
           name: formData.name,
           email: formData.email,
           password: formData.password
