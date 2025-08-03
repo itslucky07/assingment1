@@ -77,54 +77,17 @@ Frontend runs on: http://localhost:3000
 
 ---
 
-## 📊 API Endpoints
-
-### GET /api/intern
-Returns intern profile data:
-```json
-{
-  "success": true,
-  "data": {
-    "id": 1,
-    "name": "Alex Johnson",
-    "email": "alex.johnson@example.com",
-    "referralCode": "alexjohnson2025",
-    "totalDonations": 2547,
-    "rewards": [...],
-    "joinDate": "2025-07-01"
-  }
-}
-```
-
-### GET /api/leaderboard
-Returns leaderboard rankings:
-```json
-{
-  "success": true,
-  "data": [
-    {
-      "id": 1,
-      "name": "Sarah Chen",
-      "referralCode": "sarahchen2025",
-      "totalDonations": 4521,
-      "rank": 1
-    },
-    ...
-  ]
-}
-```
-
-### POST /api/intern/donations
-Record a new donation:
-```json
-{
-  "amount": 100
-}
-```
-
----
+ 
 
 ## 📱 Screenshots
+- Dashboard
+ <img width="1919" height="967" alt="image" src="https://github.com/user-attachments/assets/6999baeb-b895-470c-9d04-607cc92d1c63" />
+
+- Leaderboard
+ <img width="1917" height="967" alt="image" src="https://github.com/user-attachments/assets/4936c625-ae96-4e71-93c8-709833fcfc35" />
+
+
+
 
 ### Login Page
 - Clean, modern design with login/signup toggle
@@ -207,8 +170,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-## 📞 Support
+ 
 
-For questions or support, please open an issue on GitHub or contact the development team.
-
-**Happy fundraising! 🎉**
+ 
