@@ -9,7 +9,7 @@ const Leaderboard = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  const API_BASE_URL = 'https://assingment1-1.onrender.com';
+  const API_BASE_URL = 'https://assingment1-v0jx.onrender.com';
 
   useEffect(() => {
     fetchLeaderboardData();
