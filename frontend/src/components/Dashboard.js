@@ -10,7 +10,7 @@ const Dashboard = () => {
   const [userData, setUserData] = useState(null);
   const navigate = useNavigate();
 
-  const API_BASE_URL = 'http://localhost:5000';
+  const API_BASE_URL = 'https://assingment1-1.onrender.com';
 
   useEffect(() => {
     // Check if user is logged in
