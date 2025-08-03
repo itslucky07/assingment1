@@ -1,13 +1,7 @@
+// src/components/Login.js
+
 import React, { useState } from 'react';
-impor      } else {
-        // Register
-        const registerResponse = await axios.post('http://localhost:5000/api/auth/register', {
-          name: formData.name,
-          email: formData.email,
-          password: formData.password
-        });
-        
-        setSuccess(`Registration successful! Welcome ${registerResponse.data.user.name}! Please login with your credentials.`);vigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css';
 
@@ -45,23 +39,22 @@ const Login = () => {
           email: formData.email,
           password: formData.password
         });
-        
-        // Store user data in localStorage
+
         localStorage.setItem('userData', JSON.stringify(response.data.user));
         setSuccess('Login successful! Redirecting...');
-        
+
         setTimeout(() => {
           navigate('/dashboard');
         }, 1000);
       } else {
         // Register
-        await axios.post('http://localhost:5000/api/auth/register', {
+        const registerResponse = await axios.post('http://localhost:5000/api/auth/register', {
           name: formData.name,
           email: formData.email,
           password: formData.password
         });
-        
-        setSuccess('Registration successful! Please login with your credentials.');
+
+        setSuccess(`Registration successful! Welcome ${registerResponse.data.user.name}! Please login with your credentials.`);
         setIsLogin(true);
         setFormData({ email: formData.email, password: '', name: '' });
       }
@@ -83,7 +76,7 @@ const Login = () => {
           <h1>🎯 Intern Portal</h1>
           <p>Welcome to your fundraising dashboard</p>
         </div>
-        
+
         <div className="form-toggle">
           <button 
             className={isLogin ? 'active' : ''}
@@ -104,7 +97,7 @@ const Login = () => {
             <span>❌</span> {error}
           </div>
         )}
-        
+
         {success && (
           <div className="message success-message">
             <span>✅</span> {success}
@@ -121,11 +114,11 @@ const Login = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 placeholder="Enter your full name"
-                required={!isLogin}
+                required
               />
             </div>
           )}
-          
+
           <div className="form-group">
             <label>Email</label>
             <input
@@ -163,7 +156,7 @@ const Login = () => {
         </form>
 
         <div className="demo-note">
-          <p>� <strong>Demo Credentials:</strong> Use any existing email or create a new account</p>
+          <p><strong>Demo Credentials:</strong> Use any existing email or create a new account</p>
         </div>
       </div>
     </div>

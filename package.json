@@ -11,10 +11,21 @@
     "test": "npm test --prefix frontend",
     "dev": "concurrently \"npm run dev --prefix backend\" \"npm start --prefix frontend\""
   },
-  "keywords": ["intern", "portal", "fundraising", "dashboard", "react", "express"],
+  "keywords": [
+    "intern",
+    "portal",
+    "fundraising",
+    "dashboard",
+    "react",
+    "express"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "react-router-dom": "^7.7.1"
   }
 }
